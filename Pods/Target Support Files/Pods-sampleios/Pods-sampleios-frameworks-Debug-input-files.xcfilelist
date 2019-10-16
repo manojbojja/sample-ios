@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-sampleios/Pods-sampleios-frameworks.sh
+${PODS_ROOT}/StripeTerminal/Carthage/Build/iOS/StripeTerminal.framework
+${PODS_ROOT}/StripeTerminal/Carthage/Build/iOS/StripeTerminal.framework.dSYM

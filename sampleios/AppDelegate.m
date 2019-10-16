@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <StripeTerminal/StripeTerminal.h>
+#import "APPAPIClient.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [SCPTerminal setTokenProvider:[APPAPIClient shared]];
     return YES;
 }
 
