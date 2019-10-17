@@ -27,20 +27,36 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p9q-6S-fMe" secondAttribute="height" multiplier="59:10" id="5kJ-C8-QJY"/>
                                 </constraints>
-                                <state key="normal" title="Discover ">
+                                <state key="normal" title="Discover  by proximity">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="triggerDiscover:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Up3-KU-VCI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXO-fL-pDX">
+                                <rect key="frame" x="118.5" y="592" width="177" height="30"/>
+                                <color key="backgroundColor" red="0.38864138722419739" green="0.37733995914459229" blue="0.85925775766372681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="3U5-N3-udg"/>
+                                    <constraint firstAttribute="height" constant="30" id="rUb-UL-i2n"/>
+                                </constraints>
+                                <state key="normal" title="Discover by scan">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="triggerDiscoverByScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJi-jP-21X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="bXO-fL-pDX" firstAttribute="top" secondItem="p9q-6S-fMe" secondAttribute="bottom" constant="27" id="3VW-MD-Rbt"/>
                             <constraint firstItem="p9q-6S-fMe" firstAttribute="centerX" secondItem="uii-ys-AXu" secondAttribute="centerX" id="4UR-v7-L2S"/>
                             <constraint firstItem="uii-ys-AXu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fy4-GM-y7M"/>
                             <constraint firstItem="p9q-6S-fMe" firstAttribute="top" secondItem="uii-ys-AXu" secondAttribute="bottom" constant="63.5" id="IFX-ag-SOZ"/>
                             <constraint firstItem="uii-ys-AXu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="knt-HK-HBk"/>
+                            <constraint firstItem="bXO-fL-pDX" firstAttribute="centerX" secondItem="p9q-6S-fMe" secondAttribute="centerX" id="o5H-Xt-cVu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

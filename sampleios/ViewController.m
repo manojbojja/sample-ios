@@ -22,9 +22,15 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)connectReaderAction {
-    SCPDiscoveryConfiguration *config = [[SCPDiscoveryConfiguration alloc] initWithDeviceType:SCPDeviceTypeChipper2X discoveryMethod:SCPDiscoveryMethodBluetoothScan
-                                                                                    simulated:NO];
+- (void)connectReaderAction: (NSString *) scanType {
+    SCPDiscoveryConfiguration *config = nil;
+    NSLog(scanType);
+    if ([scanType isEqualToString:@"scan"]) {
+        config = [[SCPDiscoveryConfiguration alloc] initWithDeviceType:SCPDeviceTypeChipper2X discoveryMethod:SCPDiscoveryMethodBluetoothScan simulated:NO];
+    } else {
+        config = [[SCPDiscoveryConfiguration alloc] initWithDeviceType:SCPDeviceTypeChipper2X discoveryMethod:SCPDiscoveryMethodBluetoothProximity simulated:NO];
+    }
+    
     self.discoverCancelable = [[SCPTerminal shared] discoverReaders:config delegate:self completion:^(NSError *error) {
         if (error != nil) {
             NSLog(@"discoverReaders failed: %@", error);
@@ -58,8 +64,13 @@
 }
 
 - (IBAction)triggerDiscover:(id)sender {
-    [self connectReaderAction];
+    [self connectReaderAction:@"proximity"];
 }
+
+- (IBAction)triggerDiscoverByScan:(id)sender {
+    [self connectReaderAction:@"scan"];
+}
+
 
 
 
